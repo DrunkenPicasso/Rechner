@@ -2,50 +2,61 @@ public class Operation {
 
     // Dezimale Operationen
 
-    double addition(double n1, double n2) {
-        return (n1 + n2);
+    Integer addition(String n1, String n2, Integer base) {
+
+        if (Integer.valueOf(base)==1) {
+            int a = Integer.parseInt(n1);
+            int b = Integer.parseInt(n2);
+            return (a + b);
+        }
+
+        else {
+            int a = Integer.parseInt(n1, base);
+            int b = Integer.parseInt(n2, base);
+            return (a + b);
+        }
     }
 
-    double substraktion(double n1, double n2) {
-        return (n1 - n2);
+    Integer substraktion(String n1, String n2, Integer base) {
+        if (Integer.valueOf(base)==1) {
+            int a = Integer.parseInt(n1);
+            int b = Integer.parseInt(n2);
+            return (a - b);
+        }
+
+        else {
+            int a = Integer.parseInt(n1, base);
+            int b = Integer.parseInt(n2, base);
+            return (a - b);
+        }
     }
 
-    double multiplikation(double n1, double n2) {
-        return (n1 * n2);
+    Integer multiplikation(String n1, String n2, Integer base) {
+        if (Integer.valueOf(base)==1) {
+            int a = Integer.parseInt(n1);
+            int b = Integer.parseInt(n2);
+            return (a * b);
+        }
+
+        else {
+            int a = Integer.parseInt(n1, base);
+            int b = Integer.parseInt(n2, base);
+            return (a * b);
+        }
     }
 
-    double division(double n1, double n2) {
-        return (n1 / n2);
-    }
+    Integer division(String n1, String n2, Integer base) {
+        if (Integer.valueOf(base)==1) {
+            int a = Integer.parseInt(n1);
+            int b = Integer.parseInt(n2);
+            return (a / b);
+        }
 
-    // Binäre Operationen
-
-    String binaryaddition(String n1, String n2) {
-        int a = Integer.parseInt(n1, 2);
-        int b = Integer.parseInt(n2, 2);
-        int res = a + b;
-        return Integer.toBinaryString(res);
-    }
-
-    String binarysubstraktion(String n1, String n2) {
-        int a = Integer.parseInt(n1, 2);
-        int b = Integer.parseInt(n2, 2);
-        int res = a - b;
-        return Integer.toBinaryString(res);
-    }
-
-    String binarymultiplikation(String n1, String n2) {
-        int a = Integer.parseInt(n1, 2);
-        int b = Integer.parseInt(n2, 2);
-        int res = a * b;
-        return Integer.toBinaryString(res);
-    }
-
-    String binarydivision(String n1, String n2) {
-        int a = Integer.parseInt(n1, 2);
-        int b = Integer.parseInt(n2, 2);
-        int res = a / b;
-        return Integer.toBinaryString(res);
+        else {
+            int a = Integer.parseInt(n1, base);
+            int b = Integer.parseInt(n2, base);
+            return (a / b);
+        }
     }
 
 }
