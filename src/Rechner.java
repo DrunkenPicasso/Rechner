@@ -5,24 +5,21 @@ import java.util.Scanner;
 public class Rechner {
 
     public static void main(String[] args) {
+
         Scanner benutzereingabe = new Scanner(System.in);
 
         Operation operation = new Operation();
 
-
-        char operator;
-        Integer zahlensystem;
-
         try {
+
+            char operator;
+            Integer zahlensystem, resultat = 0;
+            String eingabe1, eingabe2, output;
+
+
             System.out.print("Wählen Sie das Zahlensystem (1 für dezimal, 2 für binär, 8 für oktal und 16 für hexadezimal): ");
 
             zahlensystem = benutzereingabe.nextInt();
-
-
-
-
-            String eingabe1, eingabe2, output;
-            Integer resultat=0;
 
 
             System.out.print("Bitte geben Sie die erste Zahl ein: ");
@@ -83,8 +80,6 @@ public class Rechner {
                     System.out.println("Resultat ist: " + output);
                     break;
             }
-
-
 
 
         } catch (java.util.InputMismatchException e) {
