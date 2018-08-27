@@ -57,42 +57,7 @@ public class Rechner {
                 System.out.println("Resultat ist: " + resulat);
             } else if (zahlensystem == 1) {
 
-                String binresultat = null;
-                String bineingabe1, bineingabe2;
-
-                System.out.print("Bitte geben Sie die erste binäre Zahl ein: ");
-                bineingabe1 = benutzereingabe.next();
-
-                System.out.print("Bitte geben Sie die zweite binäre Zahl ein: ");
-                bineingabe2 = benutzereingabe.next();
-
-                System.out.print("Bitte geben Sie die gewünschte Mathe-Operation ein: ");
-                operator = benutzereingabe.next().charAt(0);
-
-
-                switch (operator) {
-
-                    case '+':
-                        binresultat = operation.binaryaddition(bineingabe1, bineingabe2);
-                        break;
-
-                    case '-':
-                        binresultat = operation.binarysubstraktion(bineingabe1, bineingabe2);
-                        break;
-
-                    case '*':
-                        binresultat = operation.binarymultiplikation(bineingabe1, bineingabe2);
-                        break;
-
-                    case '/':
-                        binresultat = operation.binarydivision(bineingabe1, bineingabe2);
-                        break;
-
-                    default:
-                        System.out.println("Bitte einen gültigen Operator eingeben!");
-
-                }
-                System.out.println("Resultat ist: " + binresultat);
+                //Test
             }
 
             benutzereingabe.close();
